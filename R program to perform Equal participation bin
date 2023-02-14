@@ -1,0 +1,13 @@
+set.seed(1)
+
+dataset <- runif(100,0,10)
+
+bins<-4
+
+minimumVal<-min(dataset)
+
+maximumVal<-max(dataset)
+
+width=(maximumVal-minimumVal)/bins;
+
+cut(dataset, breaks=seq(minimumVal, maximumVal, width))
